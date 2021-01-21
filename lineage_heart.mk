@@ -13,7 +13,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_BRAND := Lenovo
 PRODUCT_DEVICE := heart
 PRODUCT_MANUFACTURER := Lenovo
-PRODUCT_MODEL := Lenovo Z5 Pro GT
+PRODUCT_MODEL := Lenovo L78032
 PRODUCT_NAME := lineage_heart
 
 BUILD_FINGERPRINT := "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys"
