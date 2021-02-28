@@ -68,6 +68,7 @@ on post-fs-data
     mkdir /tombstones/dsps 0771 system system
     mkdir /data/vendor/hbtp 0750 system system
     mkdir /data/vendor/nnhal 0700 system system
+    mkdir /data/vendor/dolby 0770 media media
 
 on early-boot
     start vendor.sensors
@@ -145,7 +146,8 @@ service vendor.thermal-engine /vendor/bin/thermal-engine
 service vendor.lowi /vendor/bin/sscrpcd
    class core
    user system
-   group system
+   group system wakelock
+   capabilities BLOCK_SUSPEND
 
 service vendor.mdm_helper /vendor/bin/mdm_helper
     class core

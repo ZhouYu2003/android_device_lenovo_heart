@@ -33,6 +33,9 @@ target=`getprop ro.board.platform`
 case "$target" in
     "msmnile" )
         setprop vendor.post_boot.parsed 1
+		cp /mnt/vendor/persist/factory/audio/spk_acc /data/vendor/audio/spk_acc
+		chmod 0666 /data/vendor/audio/spk_acc
+		chown media:audio /data/vendor/audio/spk_acc
     ;;
 esac
 
