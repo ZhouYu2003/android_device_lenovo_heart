@@ -189,6 +189,16 @@
         <fqname>@1.2::IDevice/qti-hta</fqname>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.nfc</name>
+        <transport>hwbinder</transport>
+        <version>1.2</version>
+        <interface>
+            <name>INfc</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.2::INfc/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
         <fqname>@1.2::ISap/slot1</fqname>
@@ -224,9 +234,11 @@
             <name>ISecureElement</name>
             <instance>SIM1</instance>
             <instance>SIM2</instance>
+            <instance>eSE1</instance>
         </interface>
         <fqname>@1.0::ISecureElement/SIM1</fqname>
         <fqname>@1.0::ISecureElement/SIM2</fqname>
+        <fqname>@1.0::ISecureElement/eSE1</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.sensors</name>
@@ -297,6 +309,16 @@
         <fqname>@2.1::IUceService/com.qualcomm.qti.uceservice</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.dolby.hardware.dms</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IDms</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.0::IDms/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.goodix.extend.service</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
@@ -314,7 +336,22 @@
             <name>IGoodixFingerprintDaemon</name>
             <instance>default</instance>
         </interface>
+        <interface>
+            <name>IGoodixFingerprintDaemonExt</name>
+            <instance>default</instance>
+        </interface>
         <fqname>@2.1::IGoodixFingerprintDaemon/default</fqname>
+        <fqname>@2.1::IGoodixFingerprintDaemonExt/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.nxp.nxpnfc</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>INxpNfc</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::INxpNfc/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.lineage.livedisplay</name>
@@ -338,6 +375,16 @@
             <instance>default</instance>
         </interface>
         <fqname>@2.0::IFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.esepowermanager</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IEsePowerManager</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IEsePowerManager/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.gnss</name>
@@ -464,6 +511,16 @@
         <fqname>@1.1::IFactory/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.qdutils_disp</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IQdutilsDisp</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IQdutilsDisp/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.hardware.qteeconnector</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -501,6 +558,16 @@
         </interface>
         <fqname>@1.5::IImsRadio/imsradio0</fqname>
         <fqname>@1.5::IImsRadio/imsradio1</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.radio.internal.deviceinfo</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IDeviceInfo</name>
+            <instance>deviceinfo</instance>
+        </interface>
+        <fqname>@1.0::IDeviceInfo/deviceinfo</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.lpa</name>
