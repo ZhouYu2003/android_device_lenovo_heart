@@ -26,6 +26,19 @@ source "${HELPER}"
 SECTION=
 KANG=
 
+function blob_fixup() {
+    case "${1}" in
+        vendor/lib64/libgoodixhwfingerprint.so)
+            patchelf --remove-needed libsoftkeymasterdevice.so "${2}"
+            patchelf --remove-needed libkeymaster_messages.so "${2}"
+            ;;
+        vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so)
+            patchelf --remove-needed libsoftkeymasterdevice.so "${2}"
+            patchelf --remove-needed libkeymaster_messages.so "${2}"
+            ;;
+    esac
+}
+
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
         -n | --no-cleanup )
